@@ -1,0 +1,75 @@
+.article {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background: var(--color-primary-light);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  max-width: 720px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.title {
+  font-size: 2.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.pais {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.3rem;
+}
+
+.descricaoCompleta {
+  font-size: 1.02rem;
+  color: var(--color-text);
+  line-height: 1.75;
+  margin-bottom: 1.8rem;
+}
+
+.infoBox {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+}
+
+.infoLabel {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.infoValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
