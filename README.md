@@ -64,21 +64,6 @@ npm run dev
 
 Depois abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-## Como subir para o GitHub
-
-1. Crie um repositório público novo no GitHub (sem README, sem .gitignore — já temos os nossos).
-2. Dentro da pasta `travel-portal`, rode:
-
-```bash
-git init
-git add .
-git commit -m "Primeira versão do portal de viagens"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
-git push -u origin main
-```
-
-3. Copie o link do repositório e compartilhe conforme pedido na plataforma da tarefa.
 
 ## Observações técnicas
 
