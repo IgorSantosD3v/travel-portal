@@ -6,9 +6,12 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          ✈️ ViajaJá
+          <span className={styles.logoMark}>✈</span>
+          <span className={styles.logoText}>
+            Viaja<em>Já</em>
+          </span>
         </Link>
-        <nav>
+        <nav aria-label="Navegação principal">
           <ul className={styles.nav}>
             <li>
               <Link href="/" className={styles.navLink}>

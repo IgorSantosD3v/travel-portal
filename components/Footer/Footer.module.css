@@ -1,18 +1,31 @@
 .footer {
-  background: var(--color-primary-dark);
-  color: #f0f0f0;
-  margin-top: 3rem;
+  background: var(--color-navy-dark);
+  color: var(--color-paper);
+  margin-top: 4rem;
+  border-top: 3px double var(--color-gold);
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2.2rem 1.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.stamp {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  margin-bottom: 0.3rem;
 }
 
 .subtext {
-  font-size: 0.85rem;
-  opacity: 0.75;
-  margin-top: 0.25rem;
+  opacity: 0.65;
 }

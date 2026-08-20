@@ -6,7 +6,11 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p>&copy; {anoAtual} ViajaJá — Portal de Viagens. Todos os direitos reservados.</p>
+        <span className={styles.stamp}>ViajaJá</span>
+        <p>
+          &copy; {anoAtual} ViajaJá — Portal de Viagens. Todos os direitos
+          reservados.
+        </p>
         <p className={styles.subtext}>Feito com Next.js e muito ☕</p>
       </div>
     </footer>

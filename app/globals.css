@@ -1,16 +1,27 @@
 :root {
-  --color-primary: #0a6e6e;
-  --color-primary-dark: #084f4f;
-  --color-primary-light: #e6f5f5;
-  --color-accent: #ff8c42;
-  --color-text: #1f2937;
-  --color-text-light: #6b7280;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f7f9fa;
-  --color-border: #e5e7eb;
-  --radius: 12px;
-  --max-width: 1100px;
-  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  /* Paleta "documento de viagem": papel + tinta de carimbo */
+  --color-navy: #142a42;
+  --color-navy-dark: #0d1c2e;
+  --color-ink: #1c2128;
+  --color-ink-soft: #5b6472;
+  --color-paper: #f8f3e7;
+  --color-paper-alt: #f1ead7;
+  --color-rust: #bc4a2e;
+  --color-rust-dark: #963a23;
+  --color-gold: #c9971f;
+  --color-line: #d8cdb3;
+  --color-white: #ffffff;
+
+  --radius: 4px;
+  --radius-lg: 10px;
+  --max-width: 1120px;
+  --shadow: 0 10px 30px rgba(20, 42, 66, 0.1);
+  --shadow-lift: 0 18px 40px rgba(20, 42, 66, 0.16);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
 }
 
 * {
@@ -26,10 +37,9 @@ body {
 }
 
 body {
-  color: var(--color-text);
-  background: var(--color-bg);
-  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial,
-    sans-serif;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
@@ -55,5 +65,26 @@ button {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  font-family: var(--font-display);
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

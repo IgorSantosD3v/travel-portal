@@ -11,6 +11,9 @@ export default function DestinosPage() {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
+        <span className={styles.eyebrow}>
+          {destinos.length} destinos disponíveis
+        </span>
         <h1 className={styles.title}>Nossos Destinos</h1>
         <p className={styles.subtitle}>
           Escolha um destino abaixo e veja informações completas para

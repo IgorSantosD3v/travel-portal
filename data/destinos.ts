@@ -3,6 +3,7 @@ import { Destino } from "@/types/destino";
 export const destinos: Destino[] = [
   {
     id: "rio-de-janeiro",
+    codigo: "GIG",
     nome: "Rio de Janeiro",
     pais: "Brasil",
     imagem: "https://picsum.photos/seed/rio-de-janeiro/800/600",
@@ -13,6 +14,7 @@ export const destinos: Destino[] = [
   },
   {
     id: "paris",
+    codigo: "CDG",
     nome: "Paris",
     pais: "França",
     imagem: "https://picsum.photos/seed/paris/800/600",
@@ -23,6 +25,7 @@ export const destinos: Destino[] = [
   },
   {
     id: "toquio",
+    codigo: "NRT",
     nome: "Tóquio",
     pais: "Japão",
     imagem: "https://picsum.photos/seed/toquio/800/600",
@@ -33,6 +36,7 @@ export const destinos: Destino[] = [
   },
   {
     id: "machu-picchu",
+    codigo: "CUZ",
     nome: "Machu Picchu",
     pais: "Peru",
     imagem: "https://picsum.photos/seed/machu-picchu/800/600",
@@ -43,6 +47,7 @@ export const destinos: Destino[] = [
   },
   {
     id: "roma",
+    codigo: "FCO",
     nome: "Roma",
     pais: "Itália",
     imagem: "https://picsum.photos/seed/roma/800/600",
@@ -53,6 +58,7 @@ export const destinos: Destino[] = [
   },
   {
     id: "nova-york",
+    codigo: "JFK",
     nome: "Nova York",
     pais: "Estados Unidos",
     imagem: "https://picsum.photos/seed/nova-york/800/600",

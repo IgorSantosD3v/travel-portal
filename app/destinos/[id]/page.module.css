@@ -1,52 +1,167 @@
-.article {
-  max-width: var(--max-width);
+.wrapper {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  color: var(--color-ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-rust);
+}
+
+.ticket {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  overflow: visible;
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 340px;
-  border-radius: var(--radius);
+  height: 320px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   overflow: hidden;
-  margin-bottom: 2rem;
-  background: var(--color-primary-light);
+  background: var(--color-paper-alt);
 }
 
 .image {
   object-fit: cover;
 }
 
-.content {
-  max-width: 720px;
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 28, 46, 0.85) 0%,
+    rgba(13, 28, 46, 0.15) 55%,
+    transparent 75%
+  );
 }
 
-.backLink {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: var(--color-primary);
+.code {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-paper);
+  color: var(--color-navy);
+  font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 3px;
+  border: 1px dashed var(--color-rust);
 }
 
-.title {
-  font-size: 2.1rem;
-  margin-bottom: 0.3rem;
+.imageCaption {
+  position: absolute;
+  left: 1.6rem;
+  bottom: 1.4rem;
+  color: var(--color-paper);
 }
 
 .pais {
-  color: var(--color-primary);
-  font-weight: 600;
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-  margin-bottom: 1.3rem;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+}
+
+.title {
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  color: var(--color-paper);
+}
+
+.perforation {
+  position: relative;
+  height: 0;
+  border-top: 2px dashed var(--color-line);
+  margin: 0 1.8rem;
+}
+
+.perforation::before,
+.perforation::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+}
+
+.perforation::before {
+  left: -2.6rem;
+}
+
+.perforation::after {
+  right: -2.6rem;
+}
+
+.stub {
+  padding: 1.8rem 2rem 2.2rem;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.routePoint {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.routeLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-soft);
+}
+
+.routeCode {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  letter-spacing: 0.04em;
+}
+
+.routeName {
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+}
+
+.routeArrow {
+  color: var(--color-rust);
+  font-size: 1.2rem;
+  transform: rotate(90deg);
+  margin-top: 1rem;
 }
 
 .descricaoCompleta {
   font-size: 1.02rem;
-  color: var(--color-text);
+  color: var(--color-ink);
   line-height: 1.75;
   margin-bottom: 1.8rem;
 }
@@ -55,21 +170,50 @@
   display: inline-flex;
   flex-direction: column;
   gap: 0.15rem;
-  background: var(--color-primary-light);
-  border: 1px solid var(--color-border);
+  background: var(--color-paper-alt);
+  border: 1px dashed var(--color-line);
   border-radius: var(--radius);
   padding: 1rem 1.5rem;
 }
 
 .infoLabel {
-  font-size: 0.8rem;
-  color: var(--color-text-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 }
 
 .infoValue {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-rust);
+}
+
+.barcode {
+  margin-top: 2rem;
+  height: 28px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-navy) 0,
+    var(--color-navy) 2px,
+    transparent 2px,
+    transparent 5px,
+    var(--color-navy) 5px,
+    var(--color-navy) 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  opacity: 0.7;
+}
+
+@media (max-width: 560px) {
+  .route {
+    gap: 0.8rem;
+  }
+
+  .routeCode {
+    font-size: 1.2rem;
+  }
 }

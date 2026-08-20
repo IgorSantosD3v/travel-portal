@@ -37,31 +37,58 @@ export default async function DestinoDetalhePage({
   }
 
   return (
-    <article className={styles.article}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src={destino.imagem}
-          alt={`Foto de ${destino.nome}`}
-          fill
-          sizes="100vw"
-          className={styles.image}
-          priority
-        />
-      </div>
+    <article className={styles.wrapper}>
+      <Link href="/destinos" className={styles.backLink}>
+        ← Voltar para destinos
+      </Link>
 
-      <div className={styles.content}>
-        <Link href="/destinos" className={styles.backLink}>
-          ← Voltar para destinos
-        </Link>
+      <div className={styles.ticket}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src={destino.imagem}
+            alt={`Foto de ${destino.nome}`}
+            fill
+            sizes="100vw"
+            className={styles.image}
+            priority
+          />
+          <div className={styles.imageOverlay} />
+          <span className={styles.code}>{destino.codigo}</span>
+          <div className={styles.imageCaption}>
+            <span className={styles.pais}>{destino.pais}</span>
+            <h1 className={styles.title}>{destino.nome}</h1>
+          </div>
+        </div>
 
-        <h1 className={styles.title}>{destino.nome}</h1>
-        <p className={styles.pais}>{destino.pais}</p>
+        <div className={styles.perforation} aria-hidden="true" />
 
-        <p className={styles.descricaoCompleta}>{destino.descricaoCompleta}</p>
+        <div className={styles.stub}>
+          <div className={styles.route}>
+            <div className={styles.routePoint}>
+              <span className={styles.routeLabel}>De</span>
+              <span className={styles.routeCode}>VJJ</span>
+              <span className={styles.routeName}>ViajaJá</span>
+            </div>
+            <span className={styles.routeArrow} aria-hidden="true">
+              ✈
+            </span>
+            <div className={styles.routePoint}>
+              <span className={styles.routeLabel}>Para</span>
+              <span className={styles.routeCode}>{destino.codigo}</span>
+              <span className={styles.routeName}>{destino.nome}</span>
+            </div>
+          </div>
 
-        <div className={styles.infoBox}>
-          <span className={styles.infoLabel}>Preço estimado</span>
-          <span className={styles.infoValue}>{destino.preco}</span>
+          <p className={styles.descricaoCompleta}>
+            {destino.descricaoCompleta}
+          </p>
+
+          <div className={styles.infoBox}>
+            <span className={styles.infoLabel}>Preço estimado</span>
+            <span className={styles.infoValue}>{destino.preco}</span>
+          </div>
+
+          <div className={styles.barcode} aria-hidden="true" />
         </div>
       </div>
     </article>

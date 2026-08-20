@@ -18,12 +18,20 @@ export default function CardDestino({ destino }: CardDestinoProps) {
           sizes="(max-width: 768px) 100vw, 33vw"
           className={styles.image}
         />
+        <span className={styles.code}>{destino.codigo}</span>
       </div>
+
+      <div className={styles.perforation} aria-hidden="true" />
+
       <div className={styles.content}>
-        <h3 className={styles.nome}>{destino.nome}</h3>
-        <p className={styles.pais}>{destino.pais}</p>
+        <div className={styles.contentHeader}>
+          <h3 className={styles.nome}>{destino.nome}</h3>
+          <span className={styles.pais}>{destino.pais}</span>
+        </div>
         <p className={styles.descricao}>{destino.descricao}</p>
-        <span className={styles.link}>Ver detalhes →</span>
+        <span className={styles.link}>
+          Ver detalhes <span className={styles.linkArrow}>→</span>
+        </span>
       </div>
     </Link>
   );
